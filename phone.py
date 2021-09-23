@@ -2,7 +2,6 @@ import re
 from models import List
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QTableWidgetItem
-from PyQt5.QtCore import Qt
 from mainForm import Ui_Form
 import sys
 
@@ -12,11 +11,11 @@ class Main_window(QtWidgets.QMainWindow):
         super(Main_window, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.setFixedSize(891, 463)
+        self.setFixedSize(891, 443)
         self.query = query
+        self.ui.inp.setPlaceholderText('Введите текст для поиска...')
 
         self.ui.btnSearch.clicked.connect(self.search_name)
-        self.ui.inp.event()
 
     def get_all_value(self):
         self.ui.table.setRowCount(0)
