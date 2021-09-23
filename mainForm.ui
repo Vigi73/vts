@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>891</width>
-    <height>444</height>
+    <height>463</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Спавочник ВТС УФК по Алтайскому краю 09.2021</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/logo.ico</normaloff>img/logo.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(191, 191, 143);</string>
@@ -56,7 +60,7 @@
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">alternate-background-color: rgb(170, 170, 127);</string>
+       <string notr="true">alternate-background-color: rgb(170, 170, 130);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Box</enum>
@@ -138,7 +142,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="inp">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -151,7 +155,7 @@
     <string notr="true"/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btnSearch">
    <property name="geometry">
     <rect>
      <x>760</x>
@@ -171,13 +175,22 @@
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>412</y>
+     <y>409</y>
      <width>91</width>
      <height>23</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="digitCount">
+    <number>10</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
  </widget>
