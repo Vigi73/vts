@@ -7,26 +7,26 @@ import sys
 
 
 class Main_window(QtWidgets.QMainWindow):
+    """Create main window"""
     def __init__(self, query):
         super(Main_window, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.setFixedSize(891, 443)
+        self.setFixedSize(891, 602)
         self.query = query
         self.ui.inp.setPlaceholderText('Введите текст для поиска...')
 
         self.ui.btnSearch.clicked.connect(self.search_name)
 
     def get_all_value(self):
+        """Request Processing in BD"""
         self.ui.table.setRowCount(0)
         self.ui.table.horizontalHeader().setSectionResizeMode(0, 1)
-        # self.ui.table.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.Stretch)
         self.ui.table.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
 
-        # query = List.select()
         for i, data in enumerate(self.query):
             try:
-                mobil = re.findall(r'8-\d\d\d-\d\d\d-\d\d-\d\d', data.Fio)
+                mobil = re.findall(r'8-\d{3}-\d{3}-\d{2}-\d{2}', data.Fio)
                 fio = ' '.join(data.Fio.split()[:3])
 
                 self.ui.table.setRowCount(i + 1)
