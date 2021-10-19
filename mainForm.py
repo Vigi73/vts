@@ -120,7 +120,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Спавочник ВТС УФК по Алтайскому краю"))
+        Form.setWindowTitle(_translate("Form", "Справочник ВТС УФК по Алтайскому краю"))
         self.table.setSortingEnabled(False)
         item = self.table.horizontalHeaderItem(0)
         item.setText(_translate("Form", "СТРУКТУРНОЕ ПОДРАЗДЕЛЕНИЕ"))
